@@ -4,108 +4,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover Mobiciti, your technology store in Barcelona.">
-  <title>Mobiciti | Tecnología y más</title>
+  <meta name="description" content="Mobiciti - Your destination for technology and mobile accessories in Barcelona.">
+  <meta name="theme-color" content="#080d19">
+  <title>Mobiciti | Technology Store Barcelona</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header>
-    <a href="#" class="logo">MOBI<span>CITI</span></a>
-
-    <nav>
-      <a href="#home" data-es="Inicio" data-en="Home">Inicio</a>
-      <a href="#about" data-es="Nosotros" data-en="About">Nosotros</a>
-      <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
-    </nav>
-
-    <button id="language">EN</button>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <p class="tag" data-es="TECNOLOGÍA PARA TU VIDA"
-         data-en="TECHNOLOGY FOR YOUR LIFE">
-        TECNOLOGÍA PARA TU VIDA
-      </p>
-
-      <h1 data-es="El futuro de la tecnología está aquí."
-          data-en="The future of technology is here.">
-        El futuro de la tecnología está aquí.
-      </h1>
-
-      <p data-es="Descubre un mundo de tecnología y posibilidades con Mobiciti."
-         data-en="Discover a world of technology and possibilities with Mobiciti.">
-        Descubre un mundo de tecnología y posibilidades con Mobiciti.
-      </p>
-
-      <a href="#contact" class="cta"
-         data-es="Contáctanos" data-en="Contact Us">
-        Contáctanos
-      </a>
-    </section>
-
-    <section class="about" id="about">
-      <h2 data-es="Bienvenido a Mobiciti"
-          data-en="Welcome to Mobiciti">Bienvenido a Mobiciti</h2>
-      <p data-es="Tu destino tecnológico en Barcelona."
-         data-en="Your technology destination in Barcelona.">
-        Tu destino tecnológico en Barcelona.
-      </p>
-    </section>
-
-<section class="products" id="products">
-  <h2 data-es="Accesorios para móviles"
-      data-en="Mobile Accessories">
-    Accesorios para móviles
-  </h2>
-
-  <p data-es="Todo lo que necesitas para tu dispositivo."
-     data-en="Everything you need for your device.">
-    Todo lo que necesitas para tu dispositivo.
+<div class="announcement">
+  <p data-es="Bienvenido a Mobiciti | Tecnología para tu vida"
+     data-en="Welcome to Mobiciti | Technology for your life">
+     Bienvenido a Mobiciti | Tecnología para tu vida
   </p>
+</div>
 
-  <div class="product-grid">
+<header>
 
-    <div class="product-card">
-    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600"
-     alt="Wireless headphones">
-      <h3 data-es="Auriculares" data-en="Headphones">Auriculares</h3>
-      <p data-es="Disfruta de tu música."
-         data-en="Enjoy your music.">Disfruta de tu música.</p>
-    </div>
 
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1601972599720-36938d4ecd31?w=600"
-           alt="Phone case">
-      <h3 data-es="Fundas" data-en="Phone Cases">Fundas</h3>
-      <p data-es="Protege tu dispositivo."
-         data-en="Protect your device.">Protege tu dispositivo.</p>
-    </div>
+  <a href="#home" class="logo">MOBI<span>CITI</span></a>
 
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600"
-           alt="Phone charger">
-      <h3 data-es="Cargadores" data-en="Chargers">Cargadores</h3>
-      <p data-es="Energía para cada día."
-         data-en="Power for every day.">Energía para cada día.</p>
-    </div>
+  <nav>
+    <a href="#home" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="#about" data-es="Nosotros" data-en="About">Nosotros</a>
+    <a href="#products" data-es="Productos" data-en="Products">Productos</a>
+    <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
+  </nav>
 
+  <button id="language" aria-label="Change language">EN</button>
+  <button id="cart-toggle">
+  🛒 Cart (<span id="cart-count">0</span>)
+</button>
+</header>
+<div id="cart-panel" class="cart-panel">
+  <div class="cart-header">
+    <h2>Shopping Cart</h2>
+    <button id="cart-close">✕</button>
   </div>
-</section>
 
-    <section class="contact" id="contact">
-      <h2 data-es="Encuéntranos" data-en="Find Us">Encuéntranos</h2>
-      <p>Via Laietana, 44, Ciutat Vella, 08003 Barcelona, Spain</p>
-      <p>+34 930 385 556</p>
-      <a href="https://wa.me/34930385556" class="cta">WhatsApp</a>
-    </section>
-  </main>
+  <div id="cart-items">
+    <p>Your cart is empty.</p>
+  </div>
 
-  <footer>
-    © 2026 Mobiciti. All rights reserved.
-  </footer>
+  <div class="cart-footer">
+    <button id="checkout">Order via WhatsApp</button>
+  </div>
+</div>
+<main>
 
-  <script src="script.js"></script>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <p class="tag"
+       data-es="TECNOLOGÍA PARA TU VIDA"
+       data-en="TECHNOLOGY FOR YOUR LIFE">
+       TECNOLOGÍA PARA TU VIDA
+    </p>
+
+    <h1
+      data-es="El futuro de la tecnología está aquí."
+      data-en="The future of technology is here.">
+      El futuro de la tecnología está aquí.
+    </h1>
+
+    <p
+      data-es="Descubre accesorios y tecnología para conectar con lo que más importa."
+      data-en="Discover accessories and technology to connect with what matters most.">
+      Descubre accesorios y tecnología para conectar con lo que más importa.
+    </p>
+
+    <a href="#products" class="cta"
+       data-es="Explorar productos"
+       data-en="Explore Products">
+       Explorar productos
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2 data-es="Bienvenido a Mobiciti"
+        data-en="Welcome to Mobiciti">
+        Bienvenido a Mobiciti
+    </h2>
+
+    <p
+      data-es="Tu destino tecnológico en Barcelona. Descubre productos y accesorios para tu día a día."
+      data-en="Your technology destination in Barcelona. Discover products and accessories for everyday life.">
+      Tu destino tecnológico en Barcelona. Descubre productos y accesorios para tu día a día.
+    </p>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+
+    <h2 data-es="Explora nuestros productos"
+        data-en="Explore Our Products">
+        Explora nuestros productos
+    </h2>
+
+    <p
+      data-es="Encuentra los accesorios perfectos para tus dispositivos."
+      data-en="Find the perfect accessories for your devices.">
+      Encuentra los accesorios perfectos para tus dispositivos.
+    </p>
+    <div class="product-search">
+  <input
+    type="text"
+    id="product-search"
+    placeholder="Search products..."
+  >
+</div>
+<div class="product-filters">
+  <button class="filter-btn active" data-filter="all">All Products</button>
+  <button class="filter-btn" data-filter="audio">Audio</button>
+  <button class="filter-btn" data-filter="power">Charging</button>
+  <button class="filter-btn" data-filter="protection">Protection</button>
+  <button class="filter-btn" data-filter="wearables">Wearables</button>
+</div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700"
+          alt="Wireless headphones">
+
+        <h3 data-es="Auriculares" data-en="Headphones">
+          Auriculares
+        </h3>
+
+        <p data-es="Disfruta de tu música."
+           data-en="Enjoy your music.">
+           Disfruta de tu música.
+        </p>
+
+        <a class="cta"
+           href="https://wa.me/34930385556?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20auriculares."
+           data-es="Consultar"
+           data-en="Enquire">
+           Consultar
+        </a>
+        <button class="add-to-cart" data-product="Headphones">
+  Add to Cart
+</button>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1601972599720-36938d4ecd31?w=700"
+          alt="Phone case">
+
+        <h3 data-es="Fundas" data-en="Phone Cases">
+          Fundas
+        </h3>
+
+        <p data-es="Protege tu dispositivo."
+           data-en="Protect your device.">
+           Protege tu dispositivo.
+        </p>
+
+        <a class="cta"
+           href="https://wa.me/34930385556?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20fundas."
+           data-es="Consultar"
+           data-en="Enquire">
+           Consultar
+        </a>
+        <button class="add-to-cart" data-product="Phone Cases">
+  Add to Cart
+</button>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=700"
+          alt="Phone charger">
+
+        <h3 data-es="Cargadores" data-en="Chargers">
+          Cargadores
+        </h3>
+
+        <p data-es="Energía para cada día."
+           data-en="Power for every day.">
+           Energía para cada día.
+        </p>
+
+        <a class="cta"
+           href="https://wa.me/34930385556?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20cargadores."
+           data-es="Consultar"
+           data-en="Enquire">
+           Consultar
+        </a>
+        <button class="add-to-cart" data-product="Chargers">
+  Add to Cart
+</button>
+      </div>
+
+<!-- SMARTWATCHES -->
+<div class="product-card">
+  <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700" alt="Smartwatch">
+  <h3 data-es="Relojes inteligentes" data-en="Smartwatches">Relojes inteligentes</h3>
+  <p data-es="Tecnología inteligente para tu día a día." data-en="Smart technology for everyday life.">Tecnología inteligente para tu día a día.</p>
+  <a class="cta" href="https://wa.me/34930385556?text=Hola%2C%20quiero%20informacion%20sobre%20smartwatches." data-es="Consultar" data-en="Enquire">Consultar</a>
+  <button class="add-to-cart" data-product="Smartwatches">Add to Cart</button>
+</div>
+
+<!-- BLUETOOTH SPEAKERS -->
+<div class="product-card">
+  <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=700" alt="Bluetooth speaker">
+  <h3 data-es="Altavoces Bluetooth" data-en="Bluetooth Speakers">Altavoces Bluetooth</h3>
+  <p data-es="Disfruta de tu música con sonido envolvente." data-en="Enjoy your music with immersive sound.">Disfruta de tu música con sonido envolvente.</p>
+  <a class="cta" href="https://wa.me/34930385556?text=Hola%2C%20quiero%20informacion%20sobre%20altavoces." data-es="Consultar" data-en="Enquire">Consultar</a>
+  <button class="add-to-cart" data-product="Bluetooth Speakers">Add to Cart</button>
+</div>
+
+<!-- POWER BANKS -->
+<div class="product-card">
+  <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=700" alt="Power bank">
+  <h3 data-es="Baterías externas" data-en="Power Banks">Baterías externas</h3>
+  <p data-es="Energía portátil cuando más la necesitas." data-en="Portable power when you need it most.">Energía portátil cuando más la necesitas.</p>
+  <a class="cta" href="https://wa.me/34930385556?text=Hola%2C%20quiero%20informacion%20sobre%20baterias%20externas." data-es="Consultar" data-en="Enquire">Consultar</a>
+  <button class="add-to-cart" data-product="Power Banks">Add to Cart</button>
+</div>
+
+<!-- SCREEN PROTECTORS -->
+<div class="product-card">
+  <img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=700" alt="Mobile accessories">
+  <h3 data-es="Protectores de pantalla" data-en="Screen Protectors">Protectores de pantalla</h3>
+  <p data-es="Protección adicional para tu dispositivo." data-en="Extra protection for your device.">Protección adicional para tu dispositivo.</p>
+  <a class="cta" href="https://wa.me/34930385556?text=Hola%2C%20quiero%20informacion%20sobre%20protectores." data-es="Consultar" data-en="Enquire">Consultar</a>
+  <button class="add-to-cart" data-product="Screen Protectors">Add to Cart</button>
+</div>
+
+<!-- CHARGING CABLES -->
+<div class="product-card">
+  <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700" alt="Charging cables">
+  <h3 data-es="Cables de carga" data-en="Charging Cables">Cables de carga</h3>
+  <p data-es="Conexiones prácticas para tus dispositivos." data-en="Convenient connections for your devices.">Conexiones prácticas para tus dispositivos.</p>
+  <a class="cta" href="https://wa.me/34930385556?text=Hola%2C%20quiero%20informacion%20sobre%20cables." data-es="Consultar" data-en="Enquire">Consultar</a>
+  <button class="add-to-cart" data-product="Charging Cables">Add to Cart</button>
+</div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <h2 data-es="Visítanos en Barcelona"
+        data-en="Visit Us in Barcelona">
+        Visítanos en Barcelona
+    </h2>
+
+    <p>Via Laietana, 44, Ciutat Vella, 08003 Barcelona, Spain</p>
+
+    <p>+34 930 385 556</p>
+
+    <a href="https://wa.me/34930385556" class="cta">
+      WhatsApp
+    </a>
+
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Mobiciti. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
