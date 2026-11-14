@@ -661,3 +661,146 @@ header h1 {
 .product-search input::placeholder {
   color: #94a3b8;
 }
+/* WHY CHOOSE MOBICITI */
+.why-us {
+  padding: 80px 8%;
+  text-align: center;
+  background: linear-gradient(135deg, #080d19, #101d32);
+}
+
+.why-us h2 {
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.why-us > p {
+  color: #94a3b8;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.why-card {
+  padding: 30px 22px;
+  background: #101d32;
+  border: 1px solid #263b5c;
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  border-color: #087bea;
+  box-shadow: 0 10px 30px rgba(8, 123, 234, 0.15);
+}
+
+.why-card h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.why-card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* BUSINESS OPENING HOURS */
+.business-hours {
+  max-width: 480px;
+  margin: 35px auto;
+  padding: 28px;
+  background: #101d32;
+  border: 1px solid #263b5c;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.business-hours h3 {
+  color: #38bdf8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.business-hours p {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #263b5c;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.business-hours p:last-child {
+  border-bottom: none;
+}
+
+.business-hours strong {
+  color: #ffffff;
+}
+/* PREMIUM FOOTER */
+.site-footer {
+  background: #060b15;
+  padding: 55px 8% 20px;
+  text-align: center;
+  border-top: 1px solid #263b5c;
+}
+
+.footer-content h2 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.footer-content h2 span {
+  color: #087bea;
+}
+
+.footer-content p {
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.footer-links a,
+.footer-whatsapp {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #38bdf8;
+}
+
+.footer-whatsapp {
+  display: inline-block;
+  background: #087bea;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #263b5c;
+  color: #64748b;
+  font-size: 13px;
+}
